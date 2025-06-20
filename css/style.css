@@ -4,6 +4,10 @@
       box-shadow: 7px 7px rgba(154, 196, 231, 0.1);
       padding: 8px;
     }
+    
+.texto-justificado {
+  text-align: justify;
+}
 
     h2 {
       color: #494646ec;
