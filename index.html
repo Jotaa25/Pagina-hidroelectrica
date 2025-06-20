@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>ENERIGÍA HIDROELECTRICA</title>
+</head>
+
+<body>
+    <!--BARRA DE NAVEGACION-->
+
+    <nav class="navbar nav-bg">
+        <form class="container-fluid justify-content-start">
+            <button class="btn btn-outline me-2" type="button">
+                <a href="index.html" class="text-decoration-none text-white">INICIO</a>
+            </button>
+            <button class="btn btn-outline me-2" type="button">
+                <a href="problematica.html" class="text-decoration-none text-white">PROBLEMÁTICA</a>
+            </button>
+            <button class="btn btn-outline me-2" type="button">
+                <a href="#" class="text-decoration-none text-white">HISTORÍA</a>
+            </button>
+            <button class="btn btn-outline me-2" type="button">
+                <a href="#" class="text-decoration-none text-white">FUNCIONAMIENTO</a>
+            </button>
+        </form>
+    </nav>
+
+
+
+    <!--CARRUSEL DE IMAGENES-->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/imagenes/central-hidroelectrica1.PNG" class="d-block w-100 " alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+                <img src="/imagenes/presa.jpg" class="d-block w-100" alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+                <img src="/imagenes/presa2.jpg" class="d-block w-100" alt="Imagen 3">
+            </div>
+        </div>
+
+        <!-- Botones de navegación (izquierda y derecha) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <!--PRIMERA COLUMNA-->
+    <main class="contenedor-principal">
+        <div class="container bg-body-secondary ">
+            <div class="row">
+                <div class="col sm-6 mt-5">
+                    <h2>QUE ES LA ENERIGÍA RENOVABLE</h2>
+                    <p class="text-align-center">¿Las energías renovables son aquellas que provienen de recursos que están
+                        relacionados con los
+                        ciclos
+                        naturales del planeta, haciendo posible que se disponga del recurso de manera permanente o por
+                        ciclos. Cada una de las fuentes (aire, agua, biomasa, luz y calor solar) requiere de diferentes
+                        tipos de tecnologías para generar energía en forma de electricidad, fuerza motriz, calor o
+                        combustibles. Se habla de energías alternativas cuando se trata de aquellas tecnologías que no
+                        han
+                        sido masivamente implementadas. Estas se han clasificado en seis grupos principales: energía
+                        solar,
+                        energía eólica, energía de la biomasa, energía hidráulica, energía de los océanos y energía de
+                        la
+                        geotermia (AMVA, 2019).
+                        <br>
+                        <br>
+                        Las energías renovables están llamadas a ser la fuente de electricidad más eficiente y económica
+                        a
+                        nivel global, impulsando además el desarrollo económico. Esto es posible cuando su producción se
+                        aborda de manera integral, considerando toda la cadena de valor —desde el sitio de generación
+                        hasta
+                        los proveedores— y priorizando la reducción del impacto en los territorios y las comunidades.
+                        Así,
+                        se logra una sostenibilidad real, apoyada en la creación de valor compartido, la implementación
+                        de
+                        principios de economía circular y el alineamiento con los Objetivos de Desarrollo Sostenible de
+                        las
+                        Naciones Unidas (ONU, 2025).
+                    </p>
+                </div>
+
+
+                <!--INICIO DE-->
+                <div class="col sm-6 mt-5">
+                    <div class="container calculator-container">
+                        <h2> CALCULA TU CONSUMO DE ENERGIA </h2>
+
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-2 col-sm-6">
+                                <input type="text" class="form-control" id="nombre" placeholder="Aparato">
+                            </div>
+                            <div class="col-md-2 col-sm-6">
+                                <input type="number" class="form-control" id="watts" placeholder="Watts (W)">
+                            </div>
+                            <div class="col-md-2 col-sm-6">
+                                <input type="number" class="form-control" id="horas" placeholder="Horas/día">
+                            </div>
+                            <div class="col-md-2 col-sm-6">
+                                <input type="number" class="form-control" id="dias" placeholder="Días">
+                            </div>
+                            <div class="col-md-2 col-sm-6">
+                                <input type="number" class="form-control" id="costo" placeholder="Costo kWh ($)">
+                            </div>
+                            <div class="col-md-2 col-sm-6 d-grid">
+                                <button class="btn btn-primary" onclick="agregar()">AGREGAR</button>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered text-center align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>Aparato</th>
+                                        <th>Watts</th>
+                                        <th>Horas/día</th>
+                                        <th>Días</th>
+                                        <th>Consumo (kWh)</th>
+                                        <th>Costo ($)</th>
+                                        <th>Eliminar</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla"></tbody>
+                                <tfoot>
+                                    <tr class="fw-bold">
+                                        <td colspan="4">Totales</td>
+                                        <td id="totalKwh">0.00</td>
+                                        <td id="totalCosto">$0.00</td>
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+
+                    <script>
+                        const tabla = document.getElementById("tabla");
+                        const totalKwh = document.getElementById("totalKwh");
+                        const totalCosto = document.getElementById("totalCosto");
+                        let datos = [];
+
+                        function agregar() {
+                            const nombre = document.getElementById("nombre").value;
+                            const watts = parseFloat(document.getElementById("watts").value);
+                            const horas = parseFloat(document.getElementById("horas").value);
+                            const dias = parseFloat(document.getElementById("dias").value);
+                            const costo = parseFloat(document.getElementById("costo").value);
+
+                            if (!nombre || isNaN(watts) || isNaN(horas) || isNaN(dias) || isNaN(costo)) {
+                                alert("Completa todos los campos correctamente.");
+                                return;
+                            }
+
+                            const consumoKwh = (watts * horas * dias) / 1000;
+                            const costoTotal = consumoKwh * costo;
+
+                            datos.push({ nombre, watts, horas, dias, consumoKwh, costoTotal });
+                            actualizarTabla();
+                            limpiarCampos();
+                        }
+
+                        function actualizarTabla() {
+                            tabla.innerHTML = "";
+                            let sumaKwh = 0, sumaCosto = 0;
+
+                            datos.forEach((item, index) => {
+                                tabla.innerHTML += `
+        <tr>
+          <td>${item.nombre}</td>
+          <td>${item.watts}</td>
+          <td>${item.horas}</td>
+          <td>${item.dias}</td>
+          <td>${item.consumoKwh.toFixed(2)}</td>
+          <td>$${item.costoTotal.toFixed(2)}</td>
+          <td><button class="btn btn-danger btn-sm" onclick="eliminar(${index})">X</button></td>
+        </tr>
+      `;
+                                sumaKwh += item.consumoKwh;
+                                sumaCosto += item.costoTotal;
+                            });
+
+                            totalKwh.textContent = sumaKwh.toFixed(2);
+                            totalCosto.textContent = `$${sumaCosto.toFixed(2)}`;
+                        }
+
+                        function eliminar(index) {
+                            datos.splice(index, 1);
+                            actualizarTabla();
+                        }
+
+                        function limpiarCampos() {
+                            document.getElementById("nombre").value = "";
+                            document.getElementById("watts").value = "";
+                            document.getElementById("horas").value = "";
+                            document.getElementById("dias").value = "";
+                            document.getElementById("costo").value = "";
+                        }
+                    </script>
+
+                    <div class="mt-4">
+                    <p class="text-center">Para utilizar correctamente la calculadora, necesitas:</p>
+
+                    <ol class="text-right">
+                        <li>Ingresar la potencia del equipo en watts (W): Este dato lo puedes encontrar en la etiqueta
+                            del dispositivo, donde generalmente se indica la cantidad de watts que consume.</li>
+
+                        <li>Ingresar el costo de la electricidad por hora: Para obtener este valor, revisa tu factura de
+                            servicios eléctricos, específicamente en la parte donde se detalla el costo por
+                            kilovatio-hora (kWh).</li>
+                    </div>
+                    </ul>
+
+    </main>
+    </div>
+
+    <footer class="py-5 bg-dark text-white ps-5">
+        <div class="container-fuid ">
+            <div class="row">
+                <div class="col sm-4 text-rigth">
+                    <h4 class="ps-5">Sobre Nosotros</h4>
+                    <ul class="list-unstyled ps-5">
+                        <li>Diana Quintero Ortiz - Ingeniera Ambiental - Magíster en gestión ambiental.</li>
+                        <li>Camila Romero - Visual Merchandising.</li>
+                        <li>Jose Gonzalez Tano - Técnico en sistemas - QA Tester.</li>
+                </div>
+                <div class="col sm-4">
+                    <h4 class="ps-5">Contáctanos</h4>
+                    <ul class="list-unstyled ps-5">
+                        <li>Email: dianisquintero3@gmail.com</li>
+                        <li>Email: camilaromero9530@gmail.com</li>
+                        <li>Email: josetano55@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="col sm-4">
+                    <h5 class="ps-5">Linkedin</h5>
+                    <ul class="list-unstyled ps-5">
+                        <li><a href="https://www.linkedin.com/in/diana-carolina-quintero-ortiz-1ab534192/"
+                                class="text-white">Diana Quintero</a></li>
+                        <li><a href="https://www.linkedin.com/in/camila-romero-026575189/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                                class="text-white">Camila Romero</a></li>
+                        <li><a href="https://www.linkedin.com/in/jose-armando-gonzalez-tano-565582232/"
+                                class="text-white">Jose Gonzalez</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-1">&copy; 2025 Nuestro Sitio Web. Todos los derechos reservados.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
