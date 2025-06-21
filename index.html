@@ -16,7 +16,7 @@
     <nav class="navbar nav-bg">
         <form class="container-fluid justify-content-center">
             <button class="btn btn-outline mx-5 "type="button">
-                <a href="index.html" class="text-decoration-none text-white">INICIO</a>
+                <a href="index.html" class="text-decoration-none text-white">INICIO</a> 
             </button>
             <button class="btn btn-outline mx-5" type="button">
                 <a href="problematica.html" class="text-decoration-none text-white">PROBLEMÁTICA</a>
@@ -61,11 +61,12 @@
 
     <!--PRIMERA COLUMNA-->
     <main class="contenedor-principal">
-        <div class="container bg-body-secondary ">
+    <element class="contenedor-principal"></element>
+        <div class="container bg-body-secondary ">  
             <div class="row">
                 <div class="col sm-6 mt-5 me-5">
-                    <h2>QUE ES LA ENERIGÍA RENOVABLE</h2>
-                    <p class="texto-justificado">¿Las energías renovables son aquellas que provienen de recursos que están
+                    <h2>¿QUÉ ES LA ENERIGÍA RENOVABLE?</h2>
+                    <p class="texto-justificado">Las energías renovables son aquellas que provienen de recursos que están
                         relacionados con los
                         ciclos
                         naturales del planeta, haciendo posible que se disponga del recurso de manera permanente o por
@@ -96,13 +97,13 @@
                 </div>
 
 
-                <!--INICIO DE-->
+                <!--INICIO DE CALCULADORA-->
                 <div class="col sm-6 mt-5">
                     <div class="container calculator-container">
-                        <h2> CALCULA TU CONSUMO DE ENERGIA </h2>
+                        <h2> CALCULA TU CONSUMO DE ENERGÍA </h2>
 
-                        <div class="row g-3 mb-4">
-                            <div class="col-md-2 col-sm-6">
+                        <div class="row g-1 mb-3">
+                            <div class="col-md-2 col-sm-0.5">
                                 <input type="text" class="form-control" id="nombre" placeholder="Aparato">
                             </div>
                             <div class="col-md-2 col-sm-6">
@@ -118,7 +119,7 @@
                                 <input type="number" class="form-control" id="costo" placeholder="Costo kWh ($)">
                             </div>
                             <div class="col-md-2 col-sm-6 d-grid">
-                                <button class="btn btn-primary" onclick="agregar()">AGREGAR</button>
+                                <button class="btn btn-primary" onclick="agregar()">ENVIAR</button>
                             </div>
                         </div>
 
@@ -211,9 +212,9 @@
                             document.getElementById("costo").value = "";
                         }
                     </script>
-
+    <!--FORMA DE UTILIZAR -->
                     <div class="mt-4">
-                    <p class="text-center">Para utilizar correctamente la calculadora, necesitas:</p>
+                    <p class="text-center"><h2>Forma de utilizar la calculadora:</h2></p>
 
                     <ol class="text-right">
                         <li>Ingresar la potencia del equipo en watts (W): Este dato lo puedes encontrar en la etiqueta
@@ -226,20 +227,86 @@
                     </ul>
 
     </main>
+    </div>      
+
+    <!--Grafica Torta-->    
+    <meta charset="UTF-10">
+  <title>Consumo de Energía Hidroeléctrica - Antioquia</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+  <style>
+    body {
+      background-color: rgb(91, 152, 214);
+    }
+    .container {
+      margin-top: 50px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  </style>    
+  <div class="container">       
+    <h1>Consumo de Energía Hidroeléctrica en Antioquia</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-3">
+        <canvas id="energiaChart"></canvas>
+      </div>
     </div>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('energiaChart').getContext('2d');
+    const energiaChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Medellín', 'Envigado', 'Bello', 'Itagüí', 'Rionegro'],
+        datasets: [{
+          label: 'Consumo (%)',
+          data: [35, 20, 15, 10, 20],
+          backgroundColor: [
+            '#4CAF50',
+            '#2196F3',
+            '#FFC107',
+            '#FF5722',
+            '#9C27B0'
+          ],
+          borderColor: '#ffffff',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom',
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.label}: ${context.parsed}%`;
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
+
+    <!--Pie de pagina-->    
 
     <footer class="py-5 bg-dark text-white ps-5">
         <div class="container-fuid ">
             <div class="row">
                 <div class="col sm-4 text-rigth">
-                    <h4 class="ps-5">Sobre Nosotros</h4>
+                    <h4 class="ps-5">Sobre nosotros:</h4>
                     <ul class="list-unstyled ps-5">
                         <li>Diana Quintero Ortiz - Ingeniera Ambiental - Magíster en gestión ambiental.</li>
-                        <li>Camila Romero - Visual Merchandising.</li>
+                        <li>Camila Romero - Técnico Contable - Visual Merchandising.</li>   
                         <li>Jose Gonzalez Tano - Técnico en sistemas - QA Tester.</li>
                 </div>
                 <div class="col sm-4">
-                    <h4 class="ps-5">Contáctanos</h4>
+                    <h4 class="ps-5">Contáctanos:</h4>
                     <ul class="list-unstyled ps-5">
                         <li>Email: dianisquintero3@gmail.com</li>
                         <li>Email: camilaromero9530@gmail.com</li>
@@ -247,7 +314,7 @@
                     </ul>
                 </div>
                 <div class="col sm-4">
-                    <h5 class="ps-5">Linkedin</h5>
+                    <h4 class="ps-5">Linkedin:</h5>
                     <ul class="list-unstyled ps-5">
                         <li><a href="https://www.linkedin.com/in/diana-carolina-quintero-ortiz-1ab534192/"
                                 class="text-white">Diana Quintero</a></li>
@@ -260,7 +327,10 @@
             </div>
             <hr>
             <div class="text-center">
-                <p class="mb-1">&copy; 2025 Nuestro Sitio Web. Todos los derechos reservados.</p>
+                <p class="mb-1">&copy; 2025 Nuestro Sitio Web</p>
+            </div>  
+            <div class="text-center">
+                <p class="mb-1"> Todos los derechos son reservados.</p>
             </div>
 
         </div>
