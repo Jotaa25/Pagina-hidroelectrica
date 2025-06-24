@@ -58,15 +58,135 @@
             <span class="visually-hidden">Siguiente</span>
         </button>
     </div>
+ 
+   <!---Historia-->
+   <main>
+       <head>
+           <meta charset="UTF-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <title>Historia</title>
+           <link rel="stylesheet" href="style.css">
+           <!-- Incluir Chart.js desde CDN -->
+           <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+       </head>
 
-        <main>
+<body>
+    <header>
+        <h1>Historia de la Energía Hidroeléctrica en Antioquia (1925 - 2025)</h1>
+        <p>Un recorrido por el desarrollo energético de la región</p>
+    </header>
+    <div class="container">
+        <div class="column left">
+            <h2>1925 - 1970: Los Primeros Pasos</h2>
+            <p>La historia de la energía hidroeléctrica en Antioquia comienza en 1925 con la construcción de pequeñas
+                plantas que abastecían a Medellín y sus alrededores...</p>
+            <ul>
+                <li>1925: Fundación de Empresas Públicas de Medellín (EPM).</li>
+                <li>1933: Se inaugura la planta de Guadalupe I.</li>
+                <li>1950: Expansión en zonas rurales.</li>
+                <li>1965: Inicio de la central de Playas.</li>
+            </ul>
 
+            <h2>1970 - 2000: Consolidación</h2>
+            <p>Durante los 70 y 80, llegaron proyectos como Playas y San Carlos, acelerando el crecimiento del sector...
+            </p>
+            <ul>
+                <li>1978: Guatapé entra en operación.</li>
+                <li>1985: Hidroituango es identificado.</li>
+                <li>1990s: Antioquia se consolida a nivel nacional.</li>
+            </ul>
+            <!-- Video -->
+            <h2><strong>MOMENTOS CLAVES EN HIDROITUANGO</strong></h2>
+            <video controls width="100%">
+                <source src="/video/video.mp4" type="video/mp4">
+            </video>
+        </div>
 
-                    <!--TRABAJAR EN ESTA AREA-->
+        <div class="column">
+            <h2>2000 - 2025: Proyectos de Gran Escala y Sostenibilidad</h2>
+            <p>Con megaproyectos como Porce III, Porce IV y Hidroituango, Antioquia se posiciona como potencia
+                hidroeléctrica...</p>
+            <ul>
+                <li>2006: Inicio del proyecto Hidroituango.</li>
+                <li>2018: Emergencia técnica retrasa el proyecto.</li>
+                <li>2022: Primera unidad entra en operación.</li>
+                <li>2025: Se proyecta operación completa.</li>
+            </ul>
 
+            <h2>Impacto y Futuro</h2>
+            <p>La energía hidroeléctrica ha sido vital para el desarrollo, pero también ha generado debates sobre
+                sostenibilidad e impacto ambiental.</p>
+            <ul>
+                <li>Contribución a la matriz energética.</li>
+                <li>Retos ambientales y sociales.</li>
+                <li>Avances hacia fuentes limpias.</li>
+            </ul>
 
-        </main>
+            <!-- Gráfica de barras -->
+            <div id="graficaContainer">
+                <h2>Evolución del Impacto Hidroeléctrico (1925 - 2025)</h2>
+                <canvas id="graficaHidro"></canvas>
+            </div>
+        </div>
+    </div>
 
+    <script>
+        const ctx = document.getElementById('graficaHidro').getContext('2d');
+        const graficaHidro = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['1925', '1950', '1975', '2000', '2025'],
+                datasets: [{
+                    label: 'Contribución (%) a la matriz energética',
+                    data: [10, 25, 45, 70, 85],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(153, 102, 255, 0.6)',
+                        'rgba(255, 159, 64, 0.6)',
+                        'rgba(255, 99, 132, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Porcentaje (%)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Año'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        enabled: true
+                    }
+                }
+            }
+        });
+    </script>
+</main>
 
         <!--PIE DE PAGINA-->
     <footer class="py-5 bg-dark text-white ps-5">
