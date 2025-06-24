@@ -148,8 +148,48 @@ Por lo tanto, las problemáticas que se generan en ausencia de fuentes renovable
 
             
         </div>
+<!--información de la grafica-->
+  <p>Información sobre las emisiones de CO₂ relacionadas con el uso de energías no renovables.</p>
+</div>
 
-
+<!-- Aquí va la gráfica -->
+<h5>Comparación de emisiones de CO₂</h5>
+<canvas id="co2Chart" style="width: 100%; max-width: 400px; height: 400px; display: block; margin: 0 auto;"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('co2Chart').getContext('2d');
+  const co2Chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['2000', '2005', '2010', '2015', '2020', '2025'],
+      datasets: [{
+        label: 'Sin energías renovables',
+        data: [20, 25, 30, 36, 42, 50],
+        borderColor: 'rgba(255, 99, 132, 1)',
+        fill: false,
+        tension: 0.3
+      },
+      {
+        label: 'Con uso de energía hidroeléctrica',
+        data: [20, 23, 25, 24, 21, 18],
+        borderColor: 'rgba(75, 192, 192, 1)',
+        fill: false,
+        tension: 0.3
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          title: { display: true, text: 'Emisiones de CO₂ (Mt)' }
+        },
+        x: {
+          title: { display: true, text: 'Año' }
+        }
+      }
+    }
+  });
+</script>
     </main>
 
 
