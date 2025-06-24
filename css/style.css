@@ -34,9 +34,15 @@ h2 {
   background-color: rgba(74, 158, 247, 0.716);
 }
 
-.bt-color:hover {
-  background-color: rgba(74, 158, 247, 0.716);
+
+
+.navegacion-principal a:hover {
+    background-color: rgb(68, 151, 227);
+    color: var(--oscuro);
+    border-radius: 10px;
 }
+
+
 
 /*CONTENEDOR DE COLUMNAS */
 .container {
@@ -44,7 +50,6 @@ h2 {
   border-radius: 10px;
   box-shadow: 6px 6px rgba(15, 24, 32, 0.193);
 }
-
 
 
 
