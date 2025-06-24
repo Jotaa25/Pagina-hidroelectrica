@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>ENERIGÍA HIDROELECTRICA</title>
 </head>
 
@@ -25,7 +26,7 @@
 
 
     <!--CARRUSEL DE IMAGENES-->
-        <div id="carouselExampleCaptions" class="carousel slide">
+    <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
@@ -72,30 +73,92 @@
 
 
         <section class="container my-5">
-            <h2 class="text-center mb-5">¿COMO ES EL FUNCIONAMIENTO?</h2>
+
 
             <div class="row g-4">
                 <!-- Paso 1 -->
                 <div class="col-md-12">
                     <div class="card shadow h-100">
                         <div class="card-body">
-                            <h5 class="card-title">¿COMO ES EL FUNCIONAMIENTO?</h5>
-                            <p class="card-text">Las centrales hidroeléctricas convierten en energía eléctrica la diferencia de energía potencial que tiene una determinada masa de agua al trasladarla entre dos puntos situados a distinta altitud o cota.</p>
+                            <h5 class="card-title">¿COMO SE GENERA?</h5>
+                            <p class="card-text">Las centrales hidroeléctricas convierten en energía eléctrica la
+                                diferencia de energía potencial que tiene una determinada masa de agua al trasladarla
+                                entre dos puntos situados a distinta altitud o cota. <br>
+                                Para ello se hace circular un caudal de agua por un circuito hidráulico que salva el
+                                desnivel entre dos puntos, lo que se conoce comúnmente como salto, y en el que el agua
+                                va adquiriendo velocidad a medida que la energía potencial se va transformado
+                                parcialmente en energía cinética. La turbina es la encargada de transformar esa energía
+                                cinética en energía mecánica, para que el generador la transforme a su vez en energía
+                                eléctrica.
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Paso 2 -->
                 <div class="col-md-6">
-                    <div class="card shadow h-100">
-
+                    <div class=" h-50">
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        <strong>CENTRALES DE AGUA FLUYENTE</strong>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">El funcionamiento de la central se adapta totalmente y
+                                        en todo momento al régimen de caudales que discurre por el río, sin alterarlo.
+                                        Estas centrales no poseen, por tanto, una capacidad significativa de
+                                        almacenamiento y tienen un funcionamiento continuo, aunque variable a lo largo
+                                        del año. La energía producida no se puede adaptar a las necesidades de cobertura
+                                        de la demanda eléctrica.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">
+                                        <strong>CENTRALES DE REGULACION</strong>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">En este caso, sí que es posible almacenar agua y regular
+                                        su funcionamiento para atender las necesidades de gestión de la demanda. La
+                                        capacidad de almacenamiento se consigue mediante un embalse situado aguas arriba
+                                        de la central y dependiendo de su capacidad se habla de regulación estacional,
+                                        anual e, incluso, hiperanual.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                        aria-controls="flush-collapseThree">
+                                        <strong>CENTRALES REVERSIBLES O DE BOMBEO</strong>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Estas instalaciones, además de generar energía, son
+                                        capaces de acumular energía eléctrica bombeando agua a un embalse superior.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <img src="/imagenes/tres.png" class="w-50" alt="">
 
                 <!-- Paso 3 -->
                 <div class="col-md-6">
                     <div class="card shadow h-100">
-                        <video src="/video/¿Cómo funciona la energía hidráulica_ - Sostenibilidad _ ACCIONA.mp4" autoplay muted loop></video>
+                        <video src="/video/¿Cómo funciona la energía hidráulica_ - Sostenibilidad _ ACCIONA.mp4"
+                            autoplay muted loop></video>
                     </div>
                 </div>
 
@@ -103,78 +166,131 @@
                 <div class="col-md-6">
                     <div class="card shadow h-100">
                         <div class="card-body">
-                            <h5 class="card-title">4. Generación eléctrica</h5>
-                            <p class="card-text">El generador conectado a la turbina convierte la energía mecánica en
-                                energía eléctrica.</p>
+                            <h5 class="card-title">Generación eléctrica</h5>
+                            <ol>
+                                <li><strong>Acumulación de agua</strong> (embalse o represa)</li>
+                                <p>Se construye una represa que almacena el agua de un río en un embalse. Esta agua contiene energía potencial debido a su altura.</p>
+                                <li><strong>Apertura de compuertas</strong></li>
+                                <p>Cuando se requiere generar energía, se abren las compuertas para que el agua fluya con fuerza hacia abajo</p>
+                                <li><strong>Movimiento de las turbinas</strong></li>
+                                <p>El agua cae con gran presión y mueve unas turbinas. Estas giran gracias a la fuerza del agua, transformando la energía del agua en energía mecánica.</p>
+                                <li><strong>Generación de electricidad</strong></li>
+                                <p>Las turbinas están conectadas a generadores eléctricos. Al girar, estos generan energía eléctrica mediante campos magnéticos.</p>
+                                <li><strong>ransporte de la energía</strong></li>
+                                <p>La electricidad generada se envía a través de transformadores, que aumentan el voltaje para transportarla por líneas de alta tensión hasta las ciudades.</p>
+                                <li><strong>Devolución del agua</strong></li>
+                                <p>El agua usada se devuelve al río, río abajo, sin contaminarla, completando el ciclo.</p>
+                            </ol>
                         </div>
                     </div>
                 </div>
 
                 <!-- Paso 5 -->
-                <div class="col-12">
+                <div class="col-md-12">
                     <div class="card shadow h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">5. Distribución</h5>
-                            <p class="card-text">La electricidad viaja por líneas de alta tensión para llegar a hogares
-                                e industrias.</p>
+                        <div class="container px-0">
+                            <h2 class="text-center mb-4">Generación de Energía en Centrales Hidroeléctricas de Antioquia
+                                (GWh/año)</h2>
+                            <div class="my-0 mx-0">
+                                <div class="">
+                                    <canvas id="graficoEnergia"></canvas>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+
+                        <script>
+                            const ctx = document.getElementById('graficoEnergia').getContext('2d');
+                            const grafico = new Chart(ctx, {
+                                type: 'bar',
+                                data: {
+                                    labels: ['Guatapé', 'Porce III', 'Porce II', 'Guadalupe III', 'Guadalupe IV', 'Troneras', 'Jaguas', 'Calderas', 'Playas'],
+                                    datasets: [{
+                                        label: 'GWh generados por año',
+                                        data: [3044.5, 3338.5, 1564.7, 1354.1, 940.3, 197.0, 813.7, 90.4, 1494.2],
+                                        backgroundColor: 'rgba(13, 110, 253, 0.6)',
+                                        borderColor: 'rgba(13, 110, 253, 1)',
+                                        borderWidth: 1
+                                    }]
+                                },
+                                options: {
+                                    responsive: true,
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true,
+                                            title: {
+                                                display: true,
+                                                text: 'GWh por Año'
+                                            }
+                                        },
+                                        x: {
+                                            title: {
+                                                display: true,
+                                                text: 'Centrales Hidroeléctricas'
+                                            }
+                                        }
+                                    },
+                                    plugins: {
+                                        legend: {
+                                            display: true,
+                                            position: 'top'
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+
+</body>
+</div>
+</div>
+</div>
+
+</section>
+
+
+
+</main>
+
+
+<!--PIE DE PAGINA-->
+<footer class="py-5 bg-dark text-white ps-5">
+    <div class="container-fuid ">
+        <div class="row">
+            <div class="col sm-4 text-rigth">
+                <h4 class="ps-5">Sobre Nosotros</h4>
+                <ul class="list-unstyled ps-5">
+                    <li>Diana Quintero Ortiz - Ingeniera Ambiental - Magíster en gestión ambiental.</li>
+                    <li>Camila Romero - Visual Merchandising.</li>
+                    <li>Jose Gonzalez Tano - Técnico en sistemas - QA Tester.</li>
             </div>
-
-            <!-- Imagen ilustrativa -->
-            <div class="text-center mt-5">
-                <img src="/imagenes/presa3.jpg"
-                    class="img-fluid rounded shadow" alt="Diagrama energía hidroeléctrica">
-                <p class="text-muted mt-2">Diagrama del funcionamiento de una planta hidroeléctrica</p>
+            <div class="col sm-4">
+                <h4 class="ps-5">Contáctanos</h4>
+                <ul class="list-unstyled ps-5">
+                    <li>Email: dianisquintero3@gmail.com</li>
+                    <li>Email: camilaromero9530@gmail.com</li>
+                    <li>Email: josetano55@gmail.com</li>
+                </ul>
             </div>
-        </section>
-
-
-
-    </main>
-
-
-    <!--PIE DE PAGINA-->
-    <footer class="py-5 bg-dark text-white ps-5">
-        <div class="container-fuid ">
-            <div class="row">
-                <div class="col sm-4 text-rigth">
-                    <h4 class="ps-5">Sobre Nosotros</h4>
-                    <ul class="list-unstyled ps-5">
-                        <li>Diana Quintero Ortiz - Ingeniera Ambiental - Magíster en gestión ambiental.</li>
-                        <li>Camila Romero - Visual Merchandising.</li>
-                        <li>Jose Gonzalez Tano - Técnico en sistemas - QA Tester.</li>
-                </div>
-                <div class="col sm-4">
-                    <h4 class="ps-5">Contáctanos</h4>
-                    <ul class="list-unstyled ps-5">
-                        <li>Email: dianisquintero3@gmail.com</li>
-                        <li>Email: camilaromero9530@gmail.com</li>
-                        <li>Email: josetano55@gmail.com</li>
-                    </ul>
-                </div>
-                <div class="col sm-4">
-                    <h5 class="ps-5">Linkedin</h5>
-                    <ul class="list-unstyled ps-5">
-                        <li><a href="https://www.linkedin.com/in/diana-carolina-quintero-ortiz-1ab534192/"
-                                class="text-white">Diana Quintero</a></li>
-                        <li><a href="https://www.linkedin.com/in/camila-romero-026575189/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                                class="text-white">Camila Romero</a></li>
-                        <li><a href="https://www.linkedin.com/in/jose-armando-gonzalez-tano-565582232/"
-                                class="text-white">Jose Gonzalez</a></li>
-                    </ul>
-                </div>
+            <div class="col sm-4">
+                <h5 class="ps-5">Linkedin</h5>
+                <ul class="list-unstyled ps-5">
+                    <li><a href="https://www.linkedin.com/in/diana-carolina-quintero-ortiz-1ab534192/"
+                            class="text-white">Diana Quintero</a></li>
+                    <li><a href="https://www.linkedin.com/in/camila-romero-026575189/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                            class="text-white">Camila Romero</a></li>
+                    <li><a href="https://www.linkedin.com/in/jose-armando-gonzalez-tano-565582232/"
+                            class="text-white">Jose Gonzalez</a></li>
+                </ul>
             </div>
-            <hr>
-            <div class="text-center">
-                <p class="mb-1">&copy; 2025 Nuestro Sitio Web. Todos los derechos reservados.</p>
-            </div>
-
         </div>
-    </footer>
+        <hr>
+        <div class="text-center">
+            <p class="mb-1">&copy; 2025 Nuestro Sitio Web. Todos los derechos reservados.</p>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
