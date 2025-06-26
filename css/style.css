@@ -28,12 +28,11 @@ h2 {
   background-color: rgba(255, 255, 0, 0.486);
 }
 
-/*BARRA DE NAVEGACION*/
+
+              /*BARRA DE NAVEGACION*/
 .nav-bg {
   background-color: rgba(74, 158, 247, 0.716);
 }
-
-
 
 .navegacion-principal a:hover {
     background-color: rgb(68, 151, 227);
@@ -42,8 +41,7 @@ h2 {
 }
 
 
-
-/*CONTENEDOR DE COLUMNAS */
+              /*CONTENEDOR DE COLUMNAS */
 .container {
   background: rgb(235, 240, 246);
   border-radius: 10px;
@@ -51,9 +49,7 @@ h2 {
 }
 
 
-
-
-/*CARRUCEL*/
+            /*CARRUCEL*/
 .carousel-item img {
   width: 100%;
   height: 400px;
@@ -63,6 +59,29 @@ h2 {
 
 
 
+            /*FORMULARIO*/
+    .card-custom {
+    background-color: #e7ebf5;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-custom {
+    background-color: #4a63b5;
+    color: white;
+    }
+
+    .btn-custom:hover {
+    background-color: #374a91;
+    }
+
+    .respuesta {
+    background-color: #d9e6ff;
+    border-left: 5px solid #4a63b5;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    }
 
 
 
