@@ -12,7 +12,7 @@
 
 <body>
 
-    <!--BARRA DE NAVEGACION-->
+                      <!--BARRA DE NAVEGACION-->
 
     <nav class="navbar nav-bg navbar-expand-lg ">
         <div class="container-fluid justify-content-center navegacion-principal ">
@@ -25,7 +25,7 @@
 
 
 
-    <!--CARRUSEL DE IMAGENES-->
+                     <!--CARRUSEL DE IMAGENES-->
     <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -72,8 +72,8 @@
 
 
 
-    <!--PRIMERA COLUMNA-->
-    <main class="container mb-10"> 
+                            <!--PRIMERA COLUMNA-->
+    <main class="container-sm mt-4 container-principal">
 
         <div class="container">
             <div class="row">
@@ -112,8 +112,8 @@
 
 
 
-                <!--INICIO DE CALCULADORA-->
-                <div class="col sm- mt-5">
+                                              <!--INICIO DE CALCULADORA-->
+                <div class="col sm-6 mt-5">
                     <div class="container-sm calculator-container">
                         <h2> CALCULA TU CONSUMO DE ENERGÍA </h2>
 
@@ -229,11 +229,12 @@
                     </script>
 
 
-                    <!--FORMA DE UTILIZAR -->
-            
+                                          <!--FORMA DE UTILIZAR -->
+                    <div class="mt-4">
                         <p class="text-center">
                         <h2>Forma de utilizar la calculadora:</h2>
                         </p>
+
                         <ol class="text-right">
                             <li>Ingresar la potencia del equipo en watts (W): Este dato lo puedes encontrar en la
                                 etiqueta
@@ -247,68 +248,9 @@
                     </ul>
 
     </main>
-    <!--Grafica Torta-->
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        .container {
-            margin-top: 20px;
-        }
 
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-    </style>
-    <div class="container mb-4">
-        <h1>Consumo de Energía Hidroeléctrica en Antioquia</h1>
-        <div class="row justify-content-center">
-            <div class="col-md-3">
-                <canvas id="energiaChart"></canvas>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        const ctx = document.getElementById('energiaChart').getContext('2d');
-        const energiaChart = new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: ['Medellín', 'Envigado', 'Bello', 'Itagüí', 'Rionegro'],
-                datasets: [{
-                    label: 'Consumo (%)',
-                    data: [35, 20, 15, 10, 20],
-                    backgroundColor: [
-                        '#4CAF50',
-                        '#2196F3',
-                        '#FFC107',
-                        '#FF5722',
-                        '#9C27B0'
-                    ],
-                    borderColor: '#ffffff',
-                    borderWidth: 2
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function (context) {
-                                return `${context.label}: ${context.parsed}%`;
-                            }
-                        }
-                    }
-                }
-            }
-        });
-    </script>
-
-    <!-- FORMULARIO-->
-
+                <!-- FORMULARIO-->
     <body>
         <div class="container py-5 my-3">
             <div class="card card-custom p-4">
@@ -347,7 +289,7 @@
         </div>
 
 
-        <!--PIE DE PAGINA  -->
+                <!--PIE DE PAGINA  -->
 
         <footer class="py-5 bg-dark text-white ps-5">
             <div class="container-fluid ">
