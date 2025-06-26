@@ -4,7 +4,7 @@ body {
 /*CALCULADORA*/
 .calculator-container {
   background: rgba(81, 138, 199, 0.892);
-  border-radius: 25px;
+  border-radius: 20px;
   box-shadow: 6px 6px rgba(15, 24, 32, 0.193);
 }
 
@@ -37,14 +37,14 @@ h2 {
 .navegacion-principal a:hover {
     background-color: rgb(68, 151, 227);
     color: var(--oscuro);
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 
               /*CONTENEDOR DE COLUMNAS */
 .container {
   background: rgb(235, 240, 246);
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 6px 6px rgba(15, 24, 32, 0.193);
 }
 
@@ -82,6 +82,3 @@ h2 {
     margin-top: 10px;
     border-radius: 5px;
     }
-
-
-
